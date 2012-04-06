@@ -1,0 +1,177 @@
+%
+% (c) 2012 Jason Wieland <jwieland@gmail.com> http://jasonwieland.com Thanks for the Tex Template
+%
+% Template originated from : Todd C. Miller.  Thank you
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\usepackage{hyperref} 
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+  \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\newcommand{\infoheader}{
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{\LARGE Jason Wieland}  & (760) 468-2369\\
+    1619 Edilee Dr. &  jwieland@gmail.com \\
+    Cardiff, CA 92007 & \url{http://www.jasonwieland.com} \\
+  \end{tabular*}
+  \\
+
+  \vspace{0.1in}
+}
+
+\newcommand{\pagebreakwithheader}{\pagebreak\infoheader}
+
+\infoheader
+
+\resheading{Objective}
+\begin{description}
+\item Work with a brilliant team solving today's challenging problems.
+\end{description}
+
+
+\resheading{Work Experience}
+\begin{itemize}
+\item
+  \ressubheading{Websense Security Labs}{San Diego, CA}{Senior Software Engineer}{November 2008 - Current}
+  \begin{itemize}
+    \resitem{Android Security Application}
+    \begin{itemize}
+      \resitem{Managed overall technology architecture and application development }
+      \resitem{Features include MDM (Mobile Device Management), Application Security (Malicious apps scanning), Web Protection  }
+      \resitem{Java/Eclipse frontend, Perl/Web Service backend}
+      \resitem{Self-terminating VPN + proxy packet rewrite for web security and DLP (Data Loss Protection) }
+    \end{itemize}
+    \resitem{Threat Seeker Cloud API}
+    \begin{itemize}
+      \resitem{Principle developer and architect }
+      \resitem{Redundant and horizontal scalable restful web service}
+      \resitem{Nginx + perl (fastcgi/plack), CDB data backend, geo balanced DNS}
+      \resitem{Deployed across 6 global data centers 4 (self hosted), 2 (managed - AWS)}
+      \resitem{Handles 2 billion requests per day, peaking at 35,000 requests per second}
+    \end{itemize}
+    \resitem{Threat Seeker Cloud Analytics}
+    \begin{itemize}
+      \resitem{Designed and built a Hadoop cluster (Cloudera) to handle Big Data challenges}
+      \resitem{Scribe for data transport, perl for data management, java/hadoop (streaming) for map/reduce }
+      \resitem{40 TB of usable storage, processing 500 GB of logs/day }
+    \end{itemize}
+  \end{itemize}
+\item
+  \ressubheading{notify.me}{San Diego, CA}{Founder}{February 2008 - September 2010}
+  \begin{itemize}
+    \resitem{Web Service to manage delivery of near-realtime notifications}
+    \resitem{Managed a small team of developers and lead business development}
+    \resitem{Website built with Perl/Catalyst, postgres DB, C\# XMPP notification engine}        
+    \resitem{At peak supported 20,000 daily users with 150k emails, 25k sms, 350k IM} 
+  \end{itemize}
+\item
+  \ressubheading{Tricord Enterprise}{San Diego, CA}{Consultant}{June 2005 - January 2008}
+  \begin{itemize}
+    \resitem{Intercasting Corporation}
+    \begin{itemize}
+      \resitem{Mobile social networking application for feature phones - Rabble}
+      \resitem{Developed backend web service API to bridge communications from external social network and mobile carriers}
+    \end{itemize}
+    \resitem{Vmix Media}
+    \begin{itemize}
+      \resitem{Online video publishing and distribution - \url{www.vmix.com} }
+      \resitem{Built out video acquisition and encoding and media content delivery}
+    \end{itemize}
+    \resitem{Continued Education}
+    \begin{itemize}
+      \resitem{Online Driving School -\url{www.idrivesafely.com} }
+      \resitem{Developed internal content management system and customer web courses }
+    \end{itemize}
+  \end{itemize}
+\item
+  \ressubheading{Full Motion Racing}{San Diego, CA}{Co-Founder}{January 2006 - September 2007 }
+  \begin{itemize}
+    \resitem{Integrated true physics driving simulators into Force Dynamics 3D motion simulators}
+    \resitem{Video more powerful than words :) \url{http://youtu.be/Zh-KQcfyzE8} }
+  \end{itemize}
+\item
+  \ressubheading{Mission Bay Vacation Rentals}{San Diego, CA}{Co-Founder}{July 2003 - Current }
+  \begin{itemize}
+    \resitem{Built a web based vacation rental business in San Diego}
+    \resitem{Revenues of 1.3 million for 2011 with 30 percent year over year growth}
+  \end{itemize}
+\item
+  \ressubheading{Vivendi Universal}{San Diego, CA}{Senior Software Engineer}{January 2003 - December 2003}
+  \begin{itemize}
+    \resitem{Implemented Universal WAV service, content distribution of UMG's music library}
+    \resitem{Ripped each CD to wav format and system would transcoded music file }
+  \end{itemize}
+\item
+  \ressubheading{MP3.com}{San Diego, CA}{Software Engineer}{July 1999 - January 2003}
+  \begin{itemize}
+    \resitem{Started as a software engineer developing content administration tools}
+    \resitem{ModPerl running with Apache prefork, mysql, custom templating engine}
+    \resitem{Promoted to manager in February 2001 and led a team of 5 engineers}
+  \end{itemize}
+\end{itemize}
+%\pagebreak 
+
+
+\resheading{Skills}
+
+\begin{description}
+\item[Languages:]
+  Perl, JavaScript, SQL, Node.js, Ruby/Python/PHP (some), Java (Hadoop/Android)
+\item[Web Frameworks:]
+  Dancer, Catalyst, Mojo, Plack, Express, Rails, jQuery, Backbone,
+\item[Technologies:]
+  LAMP, MySQL, Postgres, Hadoop (Cloudera), MongoDB, Redis
+\item[Operating Systems:]
+  Linux - RHEL (Centos), Fedora, Ubuntu
+\item[Web Security:]
+  Signature based processing, javascript de-obfuscation, Domain name reputation analytics
+\end{description}
+
+\resheading{Education}
+\begin{itemize}
+\item
+  \ressubheading{University Of California San Diego}{San Diego, CA}{Bachelor of Science in Mechnical Engineering}{August 1995 - September 2002}
+  \begin{itemize}
+    \resitem{Full Scholarship (1996-1999) through a work program with SAIC }
+    \resitem{Member of the UCSD's CalSpace team designing NEAP (Near Earth Asteroid Program) worked at NASA Ames}
+    \resitem{3 year sabbatical to concentrate on mp3.com career} 
+    \resitem{Graduated with an emphasis on software application in aeronautical engineering}
+  \end{itemize}
+\end{itemize}
+
+
+\resheading{Open Source Projects}
+\begin{description}
+\item Perl interface to Embed.ly web service API \url{https://metacpan.org/module/WebService::Embedly}
+\item Pure javascript flash card math application \url{https://github.com/jwieland/justflashcards}
+\end{description}
+
+\end{document}
